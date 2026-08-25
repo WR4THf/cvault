@@ -4,3 +4,4 @@ CMakeLists.txt.user
 
 *.log
 .qtc_clangd/
+cvault.code-workspace
