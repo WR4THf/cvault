@@ -48,6 +48,7 @@
             ];
 
             shellHook = ''
+              echo "CVAULT DEVSHELL"
               PROJECT_ROOT=$PWD
               export PROMPT_COMMAND='
                 REL_DIR="''${PWD#$PROJECT_ROOT}"
