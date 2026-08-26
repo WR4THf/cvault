@@ -38,6 +38,7 @@
         {
           default = pkgs.mkShell {
             packages = with pkgs; [
+              onefetch
               git
               neovim
               cmake
@@ -48,13 +49,12 @@
             ];
 
             shellHook = ''
-              echo ""
+              onefetch
               echo "CVAULT DEVSHELL"
               PROJECT_ROOT=$PWD
               export PROMPT_COMMAND='
                 REL_DIR="''${PWD#$PROJECT_ROOT}"
                 if [ "$REL_DIR" = "$PWD" ]; then
-                  # Если вышли за пределы проекта, показываем полный путь
                   DISPLAY_DIR="$PWD"
                 else
                   DISPLAY_DIR="~''${REL_DIR}"
