@@ -5,12 +5,13 @@ set(CMAKE_CXX_STANDARD 26)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(Qt6 REQUIRED COMPONENTS Core Gui Qml Quick)
-qt_standard_project_setup() 
+qt_standard_project_setup()
+
 add_executable(cvault
     src/main.cpp
     src/utils/KernelLogger/KernelLogger.cpp
 )
-qt_add_qml_module(cvault-bin
+qt_add_qml_module(CryptoVault
     URI cvault
     VERSION 1.0
     QML_FILES
